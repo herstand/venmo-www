@@ -1,0 +1,93 @@
+
+<!doctype html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Add transaction interface to Venmo.com</title>
+<meta name="author" content="Micah Cowsik-Herstand">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="fb:app_id" content="180472096012557" />
+<meta property="og:description" content="Add transaction interface to Venmo.com." />
+<meta property="og:image" content="https://herstand.com/venmo-transactions/venmo-txn-ui.png" />
+<meta property="og:url" content="https://herstand.com/venmo-transactions/" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Add transaction interface to Venmo.com" />
+<meta property="og:image:alt" content="Screenshot of Venmo with transaction interface." />
+<!--
+
+Hello developers!
+
+This is Micah. I promise this was made with good intentions and
+there's no sneaky stealing or tracking of your data when you use this.
+
+Shoot me an email at Micah@[this domain] with comments/suggestions. I'll get this up on github soon.
+
+Cheers,
+~Micah
+
+-->
+<style>
+* {
+box-sizing:border-box;
+text-align:center;
+}
+html,body {
+ width:100%;
+ padding:0px 5px;
+ margin:0px;
+}
+body {
+  padding-bottom:20px;
+}
+img {
+  max-width:100%;
+}
+ul, ol {
+text-align:left;
+width:500px;
+max-width:100%;
+margin:0 auto
+}
+ol {
+ margin-bottom:40px;
+}
+li {
+ text-align:left;
+}
+a:link {
+ color:#0055FF;
+ text-decoration:none; 
+}
+a:visited {
+  color:#0022AA;
+}
+a:hover {
+  color:#0044CC;
+}
+p {
+text-align:left;
+width: 500px;
+margin:10px auto;
+}
+</style>
+</head>
+<body>
+<h1>Venmo blocking you from making transactions online?</h1>
+<img src="venmo-block.png" />
+<h2>Want to make transactions from their website anyway?</h2>
+<img width="500" src="venmo-txn-ui.png" /><br />
+<h3>Instructions:</h3>
+<ol>
+<li>Drag this button into your bookmarks bar: <a style="color:white!important;text-decoration:none!important;display:inline-block;padding:5px;border:1px solid black;background:#990000;border-radius:5px;" href="javascript:(function()%7Bfunction loadPayChargeUI() %7B%24(&quot;%23left_and_right .rectBox&quot;).html(&quot;<div style%3D'color%3A%236a757f%3B padding%3A20px%3B'><h2 style%3D'line-height%3A20px%3B padding%3A0px%3B margin-top%3A0px%3B margin-left%3A0px%3B'><img style%3D'float%3Aleft%3Bmargin-right%3A10px%3Bdisplay%3Ainline-block%3B ' src%3D'&quot;%2Bvenmo.logged_in_user_profile_picture%2B&quot;' %2F>&quot;%2Bvenmo.logged_in_user.best_full_name%2B&quot;<br %2F><span style%3D'font-size%3A12px%3B'>Pay or charge a friend.<%2Fspan><%2Fh2><br %2F><form action%3D'%2Ftransaction%2Fcreate' method%3D'get' id%3D'payCharge'><label style%3D'display%3Ainline-block%3B width%3A100px' for%3D'amount'>Amount%3A<%2Flabel> <input type%3D'text' id%3D'amount' name%3D'amount' placeholder%3D'Amount…' %2F><br %2F><br %2F><label style%3D'vertical-align%3Amiddle%3B height%3A38px%3B display%3Ainline-block%3Bwidth%3A100px' for%3D'recipient'>Add Recipients%3A<%2Flabel> <div style%3D'border%3A1px solid %23999%3B padding%3A3px%3B display%3Ainline-block%3Bposition%3Arelative%3B'><div style%3D'float%3Aleft%3B' id%3D'onebox_typeahead_wrapper'><input style%3D'vertical-align%3Amiddle%3B' type%3D'text' id%3D'onebox_typeahead' placeholder%3D'Type recipient%26apos%3Bs name…' name%3D'recipient' %2F><%2Fdiv><%2Fdiv><br %2F><label style%3D'display%3Ainline-block%3B width%3A100px' for%3D'note'>Note%3A<%2Flabel> <input type%3D'text' maxlength%3D'140' name%3D'note' id%3D'note' placeholder%3D'Note' %2F><br %2F><br %2F><button type%3D'button' name%3D'pay' id%3D'pay' value%3D'pay'>Pay<%2Fbutton><button style%3D'margin-left%3A40px' type%3D'button' name%3D'charge' id%3D'charge' value%3D'charge'>Charge<%2Fbutton><input type%3D'hidden' value%3D'' id%3D'payOrCharge' name%3D'payOrCharge' %2F><%2Fform><%2Fdiv>&quot;)%3B%7DloadPayChargeUI()%3Bvenmo.load.autoCompleters()%3B%24(&quot;button&quot;).click(function(e)%7B%24(&quot;%23payOrCharge&quot;).val(e.target.name)%3B%24(&quot;form%23payCharge&quot;).submit()%3B%7D)%3B%24(&quot;%23payCharge&quot;).submit(function(e)%7Be.preventDefault()%3Bvar txnData %3D %7Btransaction_type%3A %24(&quot;%23payOrCharge&quot;).val()%2Crecipient%3A %24(&quot;form%23payCharge .onebox_recipient_link td&quot;)%5B0%5D.innerText%2Camount%3A %24(&quot;form%23payCharge %23amount&quot;).val()%2Cnote%3A %24(&quot;form%23payCharge %23note&quot;).val()%2Cpublish_to_facebook%3A false%2Cpublish_to_venmo%3A true%2Caudience%3A &quot;private&quot;%2Caccept_risk %3A true%2Cbank_account_id %3A venmo.logged_in_user.external_id%2Cpublish %3A true%2Cis_last_payment %3A true%2Ccsrfmiddlewaretoken %3A goog.net.cookies.get(&quot;csrftoken2&quot;)%2Cservice_type %3A %24(&quot;form%23payCharge .onebox_recipient_link td&quot;)%5B0%5D.innerText%7D%3Bconsole.log(&quot;Sending data%3A &quot;%2C txnData)%3Bvenmo.utils.ajax(&quot;%2Ftransaction%2Fcreate&quot;%2C txnData%2C %7Bcomplete%3A function(e) %7Bvar rawResponse %3D e.getResponseJson()%3Bvar processedResponse %3D venmo.utils.getAjaxResponse(e)%3Bconsole.log(rawResponse%2C processedResponse)%3Bif (processedResponse.success) %7B%24(&quot;%23payCharge&quot;).html(&quot;<h2 style%3D'color%3A%2300AA00%3B'>Success%3A &quot;%2BrawResponse.venmo.data.resp%2B&quot;<%2Fh2>&quot;)%3B%7D else %7B%24(&quot;%23payCharge&quot;).html(&quot;<h2 style%3D'color%3A%23AA0000'>&quot; %2B rawResponse.venmo.api_messages%5B0%5D.title%2B&quot; %5BCode%3A &quot;%2BrawResponse.venmo.api_messages%5B0%5D.error_code%2B&quot;%5D%3A &quot; %2B rawResponse.venmo.api_messages%5B0%5D.api_message %2B&quot;<%2Fh2>&quot;)%3B%7D%7D%7D)%3Breturn false%3B%7D)%7D)()">Load Venmo Txn UI</a>
+</li>
+<li>
+Login to <a target="_blank" rel="nofollow noopener" href="https://venmo.com">Venmo.com</a> and click the bookmark to load the transaction interface.
+</li>
+<li>
+Fill out the form and click Pay or Charge to pay or charge someone. Note: only one recipient per transaction is currently supported by this bookmarklet.
+</li>
+</ol>
+<h3>Notes:</h3>
+<p>I have tested both paying and charging people with this bookmarklet and it worked for me. That being said, you're playing with real money here, so use at your own risk. No lifeguard on duty.</p>
+<p>This bookmarklet solely allows usage of Venmo.com APIs in ways intended by the architects of the API. Once installed, this bookmarklet is the property of the user. All execution of its code is the legal responsibility of those who click the big red button.</p>
+</body>
+</html>
