@@ -1,7 +1,7 @@
 # Venmo Website Features
-Enable website features Venmo has disabled.
+Bookmarklets to enable website features Venmo has disabled.
 
 Currently supported:
-* Pay/Charge Bookmarklet
+* Pay/Charge GUI
 
 JS converted to bookmarklet thanks to https://mrcoles.com/bookmarklet/
