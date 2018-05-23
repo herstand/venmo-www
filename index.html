@@ -32,26 +32,37 @@ text-align:center;
 }
 html,body {
  width:100%;
- padding:0px 5px;
+ padding:0px;
  margin:0px;
 }
 body {
   padding-bottom:20px;
 }
+main {
+  margin:0px;
+  width:800px;
+  max-width:100%;
+  padding:0px 20px;
+  text-align:left;
+}
 img {
   max-width:100%;
 }
-ul, ol {
-text-align:left;
-width:500px;
-max-width:100%;
-margin:0 auto
+h1, h2, h3 {
+ text-align:left;
+}
+h3 {
+  margin-bottom:5px;
 }
 ol {
- margin-bottom:40px;
+ text-align:left;
+ margin:0 0 40px 0;
+ padding-left:0px;
 }
 li {
  text-align:left;
+ list-style-position:inside;
+ margin-bottom:5px;
 }
 a:link {
  color:#0055FF;
@@ -64,10 +75,8 @@ a:hover {
   color:#0044CC;
 }
 p {
-text-align:left;
-width: 500px;
-margin:10px auto;
-max-width:100%;
+ text-align:left;
+ margin:0 0 10px 0;0
 }
 #notes, #notes ~ * {
   font-size:75%;
@@ -75,6 +84,7 @@ max-width:100%;
 </style>
 </head>
 <body>
+<main>
 <h1>Venmo blocking you from making transactions online?</h1>
 <img src="venmo-block.png" />
 <h2>Want to make transactions from their website anyway?</h2>
@@ -91,7 +101,9 @@ Fill out the form and click Pay or Charge to pay or charge someone. Note: only o
 </li>
 </ol>
 <h3 id='notes'>Notes</h3>
+<p>Code hosted on Github. Make a PR to improve it! <a rel="nofollow noopener" target="_blank" href="https://github.com/herstand/venmo-www">https://github.com/herstand/venmo-www</a></p>
 <p>I have tested both paying and charging people with this bookmarklet and it worked for me. That being said, you're playing with real money here, so use at your own risk. No lifeguard on duty.</p>
 <p>This bookmarklet solely allows usage of Venmo.com APIs in ways intended by the architects of the API. Once installed, this bookmarklet is the property of the user. All execution of its code is the legal responsibility of those who click the big red button.</p>
+</main>
 </body>
 </html>
